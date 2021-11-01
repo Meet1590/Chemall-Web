@@ -1,0 +1,181 @@
+/* Form css */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+/* html{
+	font-size: 62.5%;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+*,::after,::before{
+	box-sizing:A border-box;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+} */
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	height: auto;
+	width: auto;
+	/* overflow: auto; */
+	background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin: 10% auto;
+	pointer-events: auto;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0,.2);
+	border-radius: .3rem;
+	outline: 0;
+	width: 100%;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+	animation-name: modalopen;
+	animation-duration: var(--modal-duration);
+  }
+  
+  .modal-header h2
+   {
+	   font-size: 2rem;
+	   font-family: inherit;
+	   font-weight: 500;
+	   line-height: 1.2;
+	   color: inherit;
+	margin: 0;
+  }
+  
+  .modal-header {
+	  display: flex;
+	  align-items: flex-start;
+	  justify-content: space-between;
+	  padding: 1rem;
+	  border-bottom: 1px solid #e9ecef;
+	background: red;
+	border-top-left-radius: .3rem;
+	border-top-right-radius: .3rem;
+	/* padding: 15px; */
+	color: #fff;
+	/* border-top-left-radius: 5px; */
+	/* border-top-right-radius: 5px; */
+  }
+  
+  .modal-body {
+	  position: relative;
+	  flex: 1 1 auto;
+	padding: 1rem;
+	background: #fff;
+  }
+
+  .modal-header .close{
+	  padding: 1rem;
+	  margin: -1rem -1rem -1rem auto;
+  }
+
+  .form-group{
+	  margin-bottom: 1rem;
+  }
+
+  .text-center{
+	  text-align: center !important;
+  }
+
+  .form-control{
+	  display: block;
+	  width: 100%;
+	  height: calc(2.25rem + 2px);
+	  padding: 0.375rem .75rem;
+	  font-size: 1rem;
+	  line-height: 1.5;
+	  color: #495057;
+	  background-color: white;
+	  background-clip: padding-box;
+	  border: 1px solid #ced4da;
+	  border-radius: .25rem;
+	  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+  button,input{
+	  overflow: visible;
+  }
+  
+  button,input,optgroup,select,textarea{
+	  margin: 0;
+	  font-family: inherit;
+  }
+
+  .btn-dark:not(:disabled):not(.disabled).active, .btn-dark:not(:disabled):not(.disabled):active, .show>.btn-dark.dropdown-toggle {
+    color: #fff;
+    background-color: #1d2124;
+    border-color: #171a1d;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.btn:focus, .btn:hover {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+	background-color:black;
+	color: #fff;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+  .close {
+	float: right;
+	font-size: 1.5rem;
+	color:black;
+	font-weight: 700;
+	line-height: 1;
+	text-shadow: 0 1px 0 #fff;
+	opacity: .5;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+  @keyframes modalopen {
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
+  }
+
+  :root {
+	--modal-duration: 1s;
+	--modal-color: red;}
+/* End Form css */

@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+#header{
+	padding: 0;
+	margin: 0;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 10px;
+	/* box-sizing: border-box; */
+}
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container3 {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+img {
+	flex: 50%;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title span {
+	color: red;
+}
+
+.cta {
+	display: inline-block;
+	/* padding: 5px px; */
+	color: white;
+	background-color: transparent;
+	border: 2px solid red;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: white;
+	background-color: red;
+}
+.brand img{
+	height: auto;
+	/* width: auto; */
+	max-width: 100%; 
+}
+
+
+/* Header section */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 135px;
+	flex: wrap;
+}
+/* #header .header { 
+	min-height: 8vh;
+	background-color: white;
+	transition: 0.3s ease background-color;
+} */
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%; 
+	max-width: 100%;
+	padding: 0 10px;
+}
+#header .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: #000;
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	flex:50%;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+	left: 0%;
+}
+#header .nav-list ul a {	
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: #000;
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: red;
+}
+
+
+@media only screen and (min-width: 0px) {
+	/* header */
+	#header .nav-bar{
+		background-color: white;
+	}
+	#header .nav-list ul { 
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: white;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 1.8rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+} 
+
